@@ -30,8 +30,7 @@ object Form1: TForm1
     ParentColor = False
     TabOrder = 0
     OnBeforeDrawItem = ControlList1BeforeDrawItem
-    ExplicitLeft = -8
-    object Label1: TLabel
+    object lbl_ProgramingName: TLabel
       AlignWithMargins = True
       Left = 304
       Top = 25
@@ -51,7 +50,7 @@ object Form1: TForm1
       Transparent = True
       WordWrap = True
     end
-    object VirtualImage1: TVirtualImage
+    object vimg_ProgramIcon: TVirtualImage
       Left = 258
       Top = 18
       Width = 32
@@ -95,7 +94,7 @@ object Form1: TForm1
       Style = clbkToolButton
       ExplicitLeft = 480
     end
-    object VirtualImage2: TVirtualImage
+    object vimgChange: TVirtualImage
       Left = 191
       Top = 25
       Width = 16
@@ -137,7 +136,7 @@ object Form1: TForm1
       ParentFont = False
       Transparent = True
     end
-    object Label2: TLabel
+    object lbl_Mar2022: TLabel
       Left = 51
       Top = 39
       Width = 6
@@ -151,7 +150,7 @@ object Form1: TForm1
       ParentFont = False
       Transparent = True
     end
-    object Label7: TLabel
+    object lbl_Mar2021: TLabel
       Left = 135
       Top = 39
       Width = 6
@@ -179,7 +178,7 @@ object Form1: TForm1
       ParentFont = False
       Transparent = True
     end
-    object Label4: TLabel
+    object lbl_Ratings: TLabel
       Left = 539
       Top = 39
       Width = 8
@@ -193,8 +192,8 @@ object Form1: TForm1
       ParentFont = False
       Transparent = True
     end
-    object Label8: TLabel
-      Left = 616
+    object lbl_Change: TLabel
+      Left = 618
       Top = 39
       Width = 8
       Height = 19
