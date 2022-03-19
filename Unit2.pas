@@ -22,7 +22,7 @@ type
     Mar2021: Byte;
     Change: String;
 
-    Programminlanguage: string;
+    Programminglanguage: string;
     Ratings: String;
     ChangePercent: String;
   end;
@@ -72,7 +72,7 @@ begin
 
   lbl_Ratings.Caption := format('%s%%', [ProgramData[AIndex].Ratings]);
   lbl_Change.Caption := format('%s%%', [ProgramData[AIndex].ChangePercent]);
-  lbl_ProgramingName.Caption := ProgramData[AIndex].Programminlanguage;
+  lbl_ProgramingName.Caption := ProgramData[AIndex].Programminglanguage;
   vimg_ProgramIcon.ImageIndex := ProgramData[AIndex].Key;
   if (ProgramData[AIndex].Change = 'down') then
     vimgChange.ImageIndex := 0
@@ -124,7 +124,7 @@ begin
       ProgramData[i].Mar2021 := StrToInt(L.Strings[1]);
       ProgramData[i].Change := L.Strings[2];
 
-      ProgramData[i].Programminlanguage := L.Strings[3];
+      ProgramData[i].Programminglanguage := L.Strings[3];
       ProgramData[i].Ratings := (L.Strings[4]);
       ProgramData[i].ChangePercent := (L.Strings[5]);
 
