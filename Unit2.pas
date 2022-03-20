@@ -110,6 +110,7 @@ begin
   L := TStringList.Create;
   try
     TIOBE.loadfromfile('../../TIOBE.txt');
+    //TIOBE.LoadfromFile(ExtractFilePath(ParamStr(0))+'data/TIOBE.txt');
 
     SetLength(ProgramData, 20);
 
