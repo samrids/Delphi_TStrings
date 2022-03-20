@@ -23,8 +23,9 @@ type
     Change: String;
 
     Programminglanguage: string;
-    Ratings: String;
+    Ratings: string;
     ChangePercent: String;
+
   end;
 
   TForm1 = class(TForm)
@@ -66,14 +67,14 @@ implementation
 procedure TForm1.ControlList1BeforeDrawItem(AIndex: Integer; ACanvas: TCanvas;
   ARect: TRect; AState: TOwnerDrawState);
 begin
-
   lbl_Mar2022.Caption := format('%d', [ProgramData[AIndex].Mar2022]);
   lbl_Mar2021.Caption := format('%d', [ProgramData[AIndex].Mar2021]);
 
   lbl_Ratings.Caption := format('%s%%', [ProgramData[AIndex].Ratings]);
   lbl_Change.Caption := format('%s%%', [ProgramData[AIndex].ChangePercent]);
   lbl_ProgramingName.Caption := ProgramData[AIndex].Programminglanguage;
-  vimg_ProgramIcon.ImageIndex := ProgramData[AIndex].Key;
+  vimg_ProgramIcon.imageindex := ProgramData[AIndex].Key;
+
   if (ProgramData[AIndex].Change = 'down') then
     vimgChange.ImageIndex := 0
   else if (ProgramData[AIndex].Change = 'downdown') then
@@ -106,15 +107,13 @@ var
   i: Byte;
 begin
   TIOBE := TStringList.Create;
-
+  L := TStringList.Create;
   try
-    TIOBE.LoadFromFile('../../TIOBE.txt');
-    //TIOBE.LoadFromFile(extractfilepath(ParamStr(0)) + 'data\TIOBE.txt');
+    TIOBE.loadfromfile('../../TIOBE.txt');
 
     SetLength(ProgramData, 20);
 
-    L := TStringList.Create;
-    for i := 0 to Pred(Length(ProgramData)) do
+    for i := 0 to Pred(Length(ProgramData)) do // 20-1
     begin
       Split('|', TIOBE.Strings[i], L);
 
@@ -125,13 +124,14 @@ begin
       ProgramData[i].Change := L.Strings[2];
 
       ProgramData[i].Programminglanguage := L.Strings[3];
-      ProgramData[i].Ratings := (L.Strings[4]);
-      ProgramData[i].ChangePercent := (L.Strings[5]);
+      ProgramData[i].Ratings := L.Strings[4];
+      ProgramData[i].ChangePercent := L.Strings[5];
 
     end;
 
   finally
     TIOBE.free;
+    L.free;
   end;
 
   ControlList1.Enabled := False;

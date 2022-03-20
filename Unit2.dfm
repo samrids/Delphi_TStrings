@@ -1233,7 +1233,7 @@ object Form1: TForm1
               681AD6D5B50000000049454E44AE426082}
           end>
       end>
-    Left = 384
-    Top = 320
+    Left = 256
+    Top = 400
   end
 end
