@@ -4,4 +4,4 @@
   and show you how to work with TControlList<br>
   Data source: https://www.tiobe.com/tiobe-index/<br>
 
-<img src="https://github.com/samrids/Delphi_TStrings/blob/main/screenshot/1647582194592.jpeg" alt="Delphi work with TControllist, TStrings">
+<img src="https://github.com/samrids/Delphi_TStrings/blob/main/screenshot/1705121226939.jpg" alt="Delphi work with TControllist, TStrings">
