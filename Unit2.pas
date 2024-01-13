@@ -18,8 +18,8 @@ type
   TProgramData = record
     Key: Byte;
 
-    Mar2022: Byte;
-    Mar2021: Byte;
+    Jan2024: Byte;
+    Jan2023: Byte;
     Change: String;
 
     Programminglanguage: string;
@@ -67,11 +67,11 @@ implementation
 procedure TForm1.ControlList1BeforeDrawItem(AIndex: Integer; ACanvas: TCanvas;
   ARect: TRect; AState: TOwnerDrawState);
 begin
-  lbl_Mar2022.Caption := format('%d', [ProgramData[AIndex].Mar2022]);
-  lbl_Mar2021.Caption := format('%d', [ProgramData[AIndex].Mar2021]);
+  lbl_Mar2022.Caption := format('%d', [ProgramData[AIndex].Jan2024]);
+  lbl_Mar2021.Caption := format('%d', [ProgramData[AIndex].Jan2023]);
 
-  lbl_Ratings.Caption := format('%s%%', [ProgramData[AIndex].Ratings]);
-  lbl_Change.Caption := format('%s%%', [ProgramData[AIndex].ChangePercent]);
+  lbl_Ratings.Caption := format('%s', [ProgramData[AIndex].Ratings]);
+  lbl_Change.Caption := format('%s', [ProgramData[AIndex].ChangePercent]);
   lbl_ProgramingName.Caption := ProgramData[AIndex].Programminglanguage;
   vimg_ProgramIcon.imageindex := ProgramData[AIndex].Key;
 
@@ -116,17 +116,17 @@ begin
 
     for i := 0 to Pred(Length(ProgramData)) do // 20-1
     begin
-      Split('|', TIOBE.Strings[i], L);
+      Split(Chr(9), TIOBE.Strings[i], L);
 
       ProgramData[i].Key := i;
 
-      ProgramData[i].Mar2022 := StrToInt(L.Strings[0]);
-      ProgramData[i].Mar2021 := StrToInt(L.Strings[1]);
+      ProgramData[i].Jan2024 := StrToInt(L.Strings[0]);
+      ProgramData[i].Jan2023 := StrToInt(L.Strings[1]);
       ProgramData[i].Change := L.Strings[2];
 
       ProgramData[i].Programminglanguage := L.Strings[3];
-      ProgramData[i].Ratings := L.Strings[4];
-      ProgramData[i].ChangePercent := L.Strings[5];
+      ProgramData[i].Ratings := L.Strings[5];
+      ProgramData[i].ChangePercent := L.Strings[6];
 
     end;
 

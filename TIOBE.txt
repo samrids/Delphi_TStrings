@@ -1,20 +1,20 @@
-﻿1|3|up|Python|14.26|+3.95
-2|1|down|C|13.06|-2.27
-3|2|down|Java|11.19|+0.74
-4|4|-|C++|8.66|+2.14
-5|5|-|C#|5.92|+0.95
-6|6|-|Visual Basic|5.77|+0.91
-7|7|-|JavaScript|2.09|-0.03
-8|8|-|PHP|1.92|-0.15
-9|9|-|Assembly language|1.90|-0.07
-10|10|-|SQL|1.85|-0.02
-11|13|up|R|1.37|+0.12
-12|14|up|Delphi/Object|1.12|-0.07|
-13|11|down|Go|0.98|-0.33
-14|19|upup|Swift|0.90|-0.05
-15|18|up|MATLAB|0.80|-0.23
-16|16|-|Ruby|0.66|-0.52
-17|12|downdown|Classic Visual Basic|0.60|-0.66
-18|20|up|Objective-C|0.59|-0.31
-19|17|down|Perl|0.57|-0.58
-20|38|upup|Lua|0.56|+0.23
+﻿1	1		Python page	Python	13.97%	-2.39%
+2	2		C page	C	11.44%	-4.81%
+3	3		C++ page	C++	9.96%	-2.95%
+4	4		Java page	Java	7.87%	-4.34%
+5	5		C# page	C#	7.16%	+1.43%
+6	7	up	JavaScript page	JavaScript	2.77%	-0.11%
+7	10	up	PHP page	PHP	1.79%	+0.40%
+8	6	down	Visual Basic page	Visual Basic	1.60%	-3.04%
+9	8	down	SQL page	SQL	1.46%	-1.04%
+10	20	upup	Scratch page	Scratch	1.44%	+0.86%
+11	12	up	Go page	Go	1.38%	+0.23%
+12	27	upup	Fortran page	Fortran	1.09%	+0.64%
+13	17	upup	Delphi/Object Pascal page	Delphi/Object Pascal	1.09%	+0.36%
+14	15	up	MATLAB page	MATLAB	0.97%	+0.06%
+15	9	downdown	Assembly language page	Assembly language	0.92%	-0.68%
+16	11	downdown	Swift page	Swift	0.89%	-0.31%
+17	25	upup	Kotlin page	Kotlin	0.85%	+0.37%
+18	16	down	Ruby page	Ruby	0.80%	+0.01%
+19	18	down	Rust page	Rust	0.79%	+0.18%
+20	31	upup	COBOL page	COBOL	0.78%	+0.45%
